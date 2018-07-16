@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>JS</title>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<button id="menu_btn">メニュー切り替え</button>
+
+<ul id="menu1">
+  <li>menu1-1</li>
+  <li>menu1-2</li>
+  <li>menu1-3</li>
+</ul>
+
+<ul id="menu2" style="display: none;">
+  <li>menu2-1</li>
+  <li>menu2-2</li>
+  <li>menu2-3</li>
+</ul>
+
+<button id="scroll_btn_up"   style="position:fixed; top:200px;left:100px;">スクロール-UP</button>
+<button id="scroll_btn_down" style="position:fixed; top:250px;left:100px;">スクロール-DOWN</button>
+
+<pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+</pre>
+
+<script>
+$(function(){
+
+  $("#menu_btn").click(function(){
+    var m1 = $("ul:hidden");
+    var m2 = $("ul:visible");
+    m2.toggle();
+    m1.toggle();
+  });
+
+  $("#scroll_btn_up").click(function(){
+    $(window).scrollTop($(window).scrollTop() - 100)
+  });
+  $("#scroll_btn_down").click(function(){
+    $(window).scrollTop($(window).scrollTop() + 100)
+  });
+});
+</script>
+</body>
+</html>
